@@ -16,3 +16,52 @@
 <app-select [selected]="prenom" [items]="prenoms" (selectedChange)="prenom = $event"></app-select>
 
 <p>Vous avez sélectionné : {{ prenom }}</p>
+
+
+<h2>exercice 1</h2>
+<app-helloworld></app-helloworld>
+
+<!--
+Exercice 1
+Dans le composant hello-world :
+- créer une propriété name avec en valeur 'Toto'
+- afficher ce nom dans paragraphe à la place de AFFICHER_LE_NOM_ICI
+- afficher ce nom dans le champs
+- écouter l'événement input comme dans login-form et mettre à jour le name
+en temps réel (le composant se rafraichira tout seul)
+-->
+
+<h2>exercice 2</h2>
+<!-- <app-multi-state-button [items]="['Toto', 'Titi', 'Tata']"></app-multi-state-button> -->
+
+<!--
+Exercice 2
+Décommenter la balise ci-dessus.
+Dans le composant multi-state-button :
+- récupérer la valeur items qui vient du parent (composant home)
+- créer une propriété index avec comme valeur initiale 0 dans multi-state-button
+- remplacer AFFICHER_L_ELEMENT_ACTIF par l'élément du tableau dont l'indice se trouve dans index
+- au click du bouton increment index de 1
+- s'il n'y a plus d'élément à cette indice, revenir à 0
+(le composant se rafraichira tout seul)
+-->
+
+<h2>exercice 3</h2>
+<app-todos></app-todos>
+
+<!--
+Exercice 3
+- afficher la propriété inputValue dans le champs
+- lorsqu'on saisi dans le champs mettre à jour inputValue
+- boucler sur la propriété todos pour recréer le contenu de todos-list :
+<div>
+  <span>Pain</span>
+</div>
+<div>
+  <span>Lait</span>
+</div>
+- écouter l'événement du formulaire, désactiver-le en appelant la méthode
+preventDefault() de l'objet event puis ajouter un objet todo au tableau sur ce modèle
+{ id: Math.random(), title: 'valeur saisie', completed: true }
+(le composant se rafraichira tout seul)
+-->

@@ -9,6 +9,9 @@ import { ClockComponent } from './clock/clock.component';
 import { CounterComponent } from './counter/counter.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { SelectComponent } from './select/select.component';
+import { HelloworldComponent } from './helloworld/helloworld.component';
+import { MultiStateButtonComponent } from './multi-state-button/multi-state-button.component';
+import { TodosComponent } from './todos/todos.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { SelectComponent } from './select/select.component';
     ClockComponent,
     CounterComponent,
     LoginFormComponent,
-    SelectComponent
+    SelectComponent,
+    HelloworldComponent,
+    MultiStateButtonComponent,
+    TodosComponent
   ],
   imports: [
     BrowserModule,
