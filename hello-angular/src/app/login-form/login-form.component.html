@@ -1,0 +1,23 @@
+<form (submit)="verifyCredentials($event)">
+  <!--
+    formEl.addEventListener('submit', ($event) => {
+      verifyCredentials($event)
+      refreshUi();
+    });
+  -->
+  <div>
+    Username : <input type="text" [value]="credentials.username" [className]="!credentials.username ? 'error':  ''" (input)="credentials.username = $any($event.target).value" />
+  </div>
+  <div>
+    Password : <input type="password" [value]="credentials.password" (input)="credentials.password = $any($event.target).value" />
+  </div>
+  <div>
+    <label>Remember me <input type="checkbox" [checked]="credentials.rememberMe" (input)="credentials.rememberMe = $any($event.target).checked" /></label>
+    <!--
+      checkboxEl.checked = credentials.rememberMe;
+    -->
+  </div>
+  <div>
+    <button>Login</button>
+  </div>
+</form>

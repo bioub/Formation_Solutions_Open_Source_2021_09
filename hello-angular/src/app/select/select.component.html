@@ -1,0 +1,6 @@
+<div class="selected" (click)="open = !open">
+  {{ selected }}
+</div>
+<div class="items" *ngIf="open">
+  <div [className]="it === selected ? 'item current' : 'item'" *ngFor="let it of items" (click)="selectItem(it)">{{it}}</div>
+</div>

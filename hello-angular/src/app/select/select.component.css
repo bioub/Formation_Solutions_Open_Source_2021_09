@@ -1,0 +1,27 @@
+:host {
+  display: block;
+}
+
+.selected {
+  border: 1px solid black;
+  max-width: 250px;
+  cursor: pointer;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.items {
+  border: 1px solid black;
+  max-width: 250px;
+  box-sizing: border-box;
+}
+
+.item {
+  cursor: pointer;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.item.current {
+  background-color: aliceblue;
+}

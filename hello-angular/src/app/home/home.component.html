@@ -1,1 +1,18 @@
-<p>home works!</p>
+<h2>hello</h2>
+<app-hello></app-hello>
+<app-hello name="Toto"></app-hello>
+<app-hello [name]="prenom"></app-hello>
+
+<h2>clock</h2>
+<app-clock></app-clock>
+
+<h2>counter</h2>
+<app-counter></app-counter>
+
+<h2>login-form</h2>
+<app-login-form></app-login-form>
+
+<h2>select</h2>
+<app-select [selected]="prenom" [items]="prenoms" (selectedChange)="prenom = $event"></app-select>
+
+<p>Vous avez sélectionné : {{ prenom }}</p>
