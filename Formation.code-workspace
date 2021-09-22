@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "API-Web-Webpack"
+		},
+		{
+			"path": "JavaScript"
+		},
+		{
+			"path": "hello-angular"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "API-Web-Webpack"
+	}
+}
