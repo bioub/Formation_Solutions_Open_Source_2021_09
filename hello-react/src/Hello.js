@@ -1,8 +1,17 @@
-function Hello() {
-  return (
-     <div className="Hello">
+// function Hello(props) {
+//   const name = props.name ?? 'Romain';
+//   return (
+//     <div className="Hello">
+//       hello {name}!
+//     </div>
+//   );
+// }
 
-     </div>
+function Hello({ name = 'Romain' }) {
+  return (
+    <div className="Hello">
+      hello {name}!
+    </div>
   );
 }
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import Hello from './Hello';
 
 // function Home() {
 //   const h2El = React.createElement('h2', {}, 'Home page');
@@ -16,10 +17,14 @@ import React from 'react';
 // }
 
 function Home() {
+  // const helloEl = React.createElement(Hello, { name: 'Romain'});
+  const prenom = 'Romain';
   return (
     <div className="Home">
       <h2>hello</h2>
-
+      <Hello />
+      <Hello name="Romain" />
+      <Hello name={prenom} />
     </div>
   );
 }

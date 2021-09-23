@@ -12,9 +12,9 @@
 		"body": [
 			"function ${TM_FILENAME_BASE}() {",
 			"  return (",
-      "     <div className=\"${TM_FILENAME_BASE}\">",
-      "       $1",
-      "     </div>",
+      "    <div className=\"${TM_FILENAME_BASE}\">",
+      "      $1",
+      "    </div>",
       "  );",
       "}",
       "",
