@@ -19,7 +19,7 @@ export class LoginFormComponent implements OnInit {
   }
 
   verifyCredentials(event: Event) {
-    event.preventDefault();
+    // event.preventDefault();
     console.log(this.credentials);
   }
 }

@@ -1,12 +1,10 @@
-<form class="todos-form">
-  <input class="todos-input">
+<form class="todos-form" (submit)="addTodo()">
+  <input name="newtodo" class="todos-input" [(ngModel)]="inputValue" />
   <button>+</button>
 </form>
 <div class="todos-list">
-  <!-- <div>
-    <span>Pain</span>
+  <div *ngFor="let t of todos">
+    <span>{{ t.title }}</span>
+    <button (click)="deleteTodo(t)">-</button>
   </div>
-  <div>
-    <span>Lait</span>
-  </div> -->
 </div>

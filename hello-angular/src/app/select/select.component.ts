@@ -10,6 +10,7 @@ export class SelectComponent implements OnInit {
   open = false;
   @Input() selected = '';
   @Input() items: string[] = [];
+  // @Input() items!: string[];
   @Output() selectedChange = new EventEmitter<string>();
 
   constructor() {

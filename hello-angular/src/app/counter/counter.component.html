@@ -3,8 +3,9 @@
 <!--
   const buttonEl = document.createElement('button');
   buttonEl.innerText = count;
-  buttonEl.addEventListener('click', (event) => {
-    count = count + 1;
+  buttonEl.addEventListener('click', ($event) => {
+    // count = count + 1;
+    this.increment()
     refreshUi();
   });
 

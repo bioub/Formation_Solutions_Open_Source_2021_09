@@ -1,6 +1,7 @@
 <h2>hello</h2>
 <app-hello></app-hello>
 <app-hello name="Toto"></app-hello>
+<app-hello [name]="'Toto'"></app-hello>
 <app-hello [name]="prenom"></app-hello>
 
 <h2>clock</h2>
@@ -13,7 +14,9 @@
 <app-login-form></app-login-form>
 
 <h2>select</h2>
-<app-select [selected]="prenom" [items]="prenoms" (selectedChange)="prenom = $event"></app-select>
+<!-- <app-select [selected]="prenom" [items]="prenoms" (selectedChange)="prenom = $event"></app-select> -->
+<app-select [(selected)]="prenom" [items]="prenoms"></app-select>
+<!-- BANANA IN BOX [()] -->
 
 <p>Vous avez sélectionné : {{ prenom }}</p>
 
@@ -32,7 +35,7 @@ en temps réel (le composant se rafraichira tout seul)
 -->
 
 <h2>exercice 2</h2>
-<!-- <app-multi-state-button [items]="['Toto', 'Titi', 'Tata']"></app-multi-state-button> -->
+<app-multi-state-button [items]="['Toto', 'Titi', 'Tata']"></app-multi-state-button>
 
 <!--
 Exercice 2

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-multi-state-button',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MultiStateButtonComponent implements OnInit {
 
+  @Input() items!: string[];
+  index = 0;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  nextIndex() {
+    this.index = (this.index + 1) % this.items.length;
+  }
 }

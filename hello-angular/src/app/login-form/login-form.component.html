@@ -1,10 +1,4 @@
-<form (submit)="verifyCredentials($event)">
-  <!--
-    formEl.addEventListener('submit', ($event) => {
-      verifyCredentials($event)
-      refreshUi();
-    });
-  -->
+<!-- <form (submit)="verifyCredentials($event)">
   <div>
     Username : <input type="text" [value]="credentials.username" [className]="!credentials.username ? 'error':  ''" (input)="credentials.username = $any($event.target).value" />
   </div>
@@ -13,6 +7,28 @@
   </div>
   <div>
     <label>Remember me <input type="checkbox" [checked]="credentials.rememberMe" (input)="credentials.rememberMe = $any($event.target).checked" /></label>
+  </div>
+  <div>
+    <button>Login</button>
+  </div>
+</form> -->
+
+
+<form (submit)="verifyCredentials($event)">
+  <!--
+    formEl.addEventListener('submit', ($event) => {
+      verifyCredentials($event)
+      refreshUi();
+    });
+  -->
+  <div>
+    Username : <input name="username" type="text" [(ngModel)]="credentials.username" [className]="!credentials.username ? 'error':  ''">
+  </div>
+  <div>
+    Password : <input name="password" type="password" [(ngModel)]="credentials.password" />
+  </div>
+  <div>
+    <label>Remember me <input name="rememberMe" type="checkbox" [(ngModel)]="credentials.rememberMe" /></label>
     <!--
       checkboxEl.checked = credentials.rememberMe;
     -->
