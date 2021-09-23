@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Todo } from './todo.model';
+import { TodoService } from './todo.service';
 
 @Component({
   selector: 'app-todos',
@@ -14,9 +15,16 @@ export class TodosComponent implements OnInit {
     { id: Math.random(), title: 'Lait', completed: false },
   ];
 
-  constructor() {}
+  constructor(private todoService: TodoService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.todoService.getAll().subscribe((todos) => {
+      this.todos = [
+        ...this.todos,
+        ...todos,
+      ];
+    });
+  }
 
   addTodo() {
     this.todos.push({

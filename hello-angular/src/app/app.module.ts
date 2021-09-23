@@ -13,6 +13,7 @@ import { HelloworldComponent } from './helloworld/helloworld.component';
 import { MultiStateButtonComponent } from './multi-state-button/multi-state-button.component';
 import { TodosComponent } from './todos/todos.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
