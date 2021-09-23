@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "hello-angular"
+		},
+		{
+			"path": "hello-react"
 		}
 	],
 	"settings": {
