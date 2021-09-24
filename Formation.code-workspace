@@ -11,9 +11,15 @@
 		},
 		{
 			"path": "hello-react"
+		},
+		{
+			"path": "hello-vue-buildless"
+		},
+		{
+			"path": "hello-vue"
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "API-Web-Webpack"
+		"liveServer.settings.multiRootWorkspaceName": "hello-vue-buildless"
 	}
 }
