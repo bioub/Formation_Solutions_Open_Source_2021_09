@@ -11,6 +11,10 @@
     <h2>select</h2>
     <Select :selected="prenom" :items="prenoms" @selectedChange="prenom = $event" />
     <p>Vous avez sélectionné : {{prenom}}</p>
+    <h2>exercice 1</h2>
+    <Helloworld />
+    <h2>exercice 2</h2>
+    <MultiStateButton :selected="prenom" :items="prenoms" @selectedChange="prenom = $event" />
   </div>
 </template>
 
@@ -21,6 +25,8 @@ import Clock from '@/components/Clock.vue'
 import Counter from '@/components/Counter.vue'
 import LoginForm from '@/components/LoginForm.vue'
 import Select from '@/components/Select.vue'
+import Helloworld from '@/components/Helloworld.vue'
+import MultiStateButton from '@/components/MultiStateButton.vue'
 
 export default {
   name: 'Home',
@@ -29,7 +35,9 @@ export default {
     Clock,
     Counter,
     LoginForm,
-    Select
+    Select,
+    Helloworld,
+    MultiStateButton
   },
   data() {
     return {
