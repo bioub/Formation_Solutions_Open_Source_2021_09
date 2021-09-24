@@ -5,6 +5,7 @@ import Hello from './Hello';
 import Helloworld from './Helloworld';
 import LoginForm from './LoginForm';
 import MultiStateButton from './MultiStateButton';
+import MultiStateButtonControlled from './MultiStateButtonControlled';
 import Select from './Select';
 import Todos from './Todos';
 
@@ -42,7 +43,11 @@ function Home() {
       <h2>login-form</h2>
       <LoginForm />
       <h2>select</h2>
-      <Select selected={prenom} items={prenoms} onSelected={(prenom) => setPrenom(prenom)}/>
+      <Select
+        selected={prenom}
+        items={prenoms}
+        onSelected={(prenom) => setPrenom(prenom)}
+      />
       <p>Vous avez sélectionné : {prenom}</p>
 
       <h2>exercice 1</h2>
@@ -57,6 +62,11 @@ function Home() {
 
       <h2>exercice 2</h2>
       <MultiStateButton items={['Toto', 'Titi', 'Tata']} />
+      <MultiStateButtonControlled
+        items={prenoms}
+        selected={prenom}
+        onSelected={(prenom) => setPrenom(prenom)}
+      />
       {/* Exercice 2
       Dans le composant multi-state-button :
       - récupérer la valeur items qui vient des props (composant home)
@@ -67,7 +77,7 @@ function Home() {
       (le composant se rafraichira tout seul) */}
 
       <h2>exercice 3</h2>
-      <Todos />
+      {/* <Todos /> */}
       {/* Exercice 3
       - afficher la propriété inputValue dans le champs
       - lorsqu'on saisi dans le champs mettre à jour inputValue

@@ -3,15 +3,23 @@ import { Component } from 'react';
 class Helloworld extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      name: 'Romain'
+    };
+  }
+  handleChange = (event) => {
+    this.setState({
+      name: event.target.value,
+    });
   }
   render() {
+    const { name } = this.state;
     return (
       <div className="Helloworld">
         <div>
-          Prénom : <input />
+          Prénom : <input value={name} onChange={this.handleChange} />
         </div>
-        <p>Hello AFFICHER_LE_NOM_ICI!</p>
+        <p>Hello {name}!</p>
       </div>
     );
   }
